@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance Batterie</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>🔋 Surveillance de Batterie</h1>
+
+    <div class="status-indicator">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text">Surveillance en cours...</span>
+    </div>
+
+    <div class="battery-container">
+      <div class="battery-level" id="battery-level"></div>
+      <div class="battery-tip"></div>
+    </div>
+
+    <div class="battery-percentage" id="battery-percentage">0%</div>
+    <div class="battery-status" id="battery-status">État de la batterie inconnu</div>
+
+    <div class="thresholds">
+      <div class="threshold low">Seuil bas: ≤20%</div>
+      <div class="threshold high">Seuil haut: ≥90%</div>
+    </div>
+
+    <div class="alert" id="alert">Alerte! Niveau de batterie critique</div>
+    <div class="yoh"></div>
+
+    <!-- Sons -->
+    <audio id="low-sound" preload="auto">
+      <source src="assets/audio/notif.mp3" type="audio/mp3">
+    </audio>
+    <audio id="full-sound" preload="auto">
+      <source src="assets/audio/notif.mp3" type="audio/mp3">
+    </audio>
+  </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

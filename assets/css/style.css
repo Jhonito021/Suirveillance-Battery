@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.battery-container {
+    position: relative;
+    width: 150px;
+    height: 70px;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 3px solid #2c3e50;
+    overflow: hidden;
+}
+
+.battery-tip {
+    background: #2c3e50;
+    height: 30px;
+    width: 8px;
+    position: absolute;
+    top: 20px;
+    right: -8px;
+    border-radius: 5px;
+}
+
+.battery-level {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, #4cd964, #ffcc00);
+    transition: width 0.5s;
+    border-radius: 5px;
+}
+
+.battery-percentage {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.battery-status {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #7f8c8d;
+}
+
+.thresholds {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.threshold {
+    background: #ecf0f1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.low {
+    color: #e74c3c;
+}
+
+.high {
+    color: #27ae60;
+}
+
+.alert {
+    background: #ff7979;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    } 50% {
+        opacity: 0.6;
+    } 100% {
+        opacity: 1;
+    }
+}
+
+
+.instructions {
+    margin-top: 25px;
+    padding: 15px;
+    background: #e8f4fc;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .thresholds {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
