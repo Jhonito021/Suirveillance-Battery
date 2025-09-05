@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusText = document.getElementById('status-text');
 
   const lowSound = document.getElementById('low-sound');
-  const fullSound = document.getElementById('full-sound');
+  const fullSound = document.getElementById('');
 
   let audioEnabled = false;
   let lastAlert = null;
