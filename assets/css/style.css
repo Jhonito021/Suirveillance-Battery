@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
 
 .container {
     background: rgba(255, 255, 255, 0.9);
